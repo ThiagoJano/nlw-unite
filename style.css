@@ -1,0 +1,139 @@
+/*receita federal - serasa*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root { /*variável*/
+    --border: 1px solid #ffffff1a;
+}
+body, table, input, button{
+    font: 300 16px/140% 'Roboto', sans-serif;/*140% altura da linha, 400 peso da linha*/
+}
+
+body {
+    background-color: #121214;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 690px;
+    margin: 0 auto;
+    padding: 20px 32px;
+}
+header {
+    padding: 20px 0;
+}
+
+form{
+    border: var(--border);
+    border-inline: none;
+    padding: 20px 0;
+} 
+
+fieldset{ /*Tira a borda branca da form*/
+    border: none;
+}
+
+fieldset > div{/* sem o > ele vai pegar todas as divs dentro, com o > ele só vai pegar a primeiro nivel de div*/
+    display: flex;
+    gap: 12px;
+
+}
+
+.input-wrapper {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 12px ; /*Espaço entre dois elementos que tenha flex*/
+
+    border: var(--border);
+    border-radius: 10px ;
+    
+    padding: 8px 12px;
+
+    font: 400 14px/150% 'Roboro', sans-serif;
+    color: #c4c4cc
+}
+
+input {
+    all: unset;
+}
+
+fieldset legend, section h2 {
+    font: 700 16px/140% 'Roboto', sans-serif;
+    color: #e1e1e6;
+    padding-bottom: 16px;
+}
+
+fieldset button{
+    width: fit-content;
+    border: 0;
+    background-color: #f48f56; /*F48F*/
+    border-radius: 10px;
+    padding: 7px 20px;
+
+    font: 700 12px/24px 'Roboto', sans-serif; /*peso da fonte / px tamanho / altura */
+    color: #00292e;
+}
+
+/*mudando a cor do botão quando passar mouse em cima*/
+
+fieldset button:hover {
+    background-color: #dd7a40;
+}
+
+.lista-participantes {
+    padding: 20px 0;
+}
+
+.lista-participantes > div {
+    border: var(--border);
+    border-radius: 8px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table thead{
+    font-size: 14px;
+    line-height: 16px;
+}
+
+thead th,
+tdody td {
+    padding: 12px 16px;
+}
+
+tbody td {
+    border-top: var(--border);
+    font-size: 13px;
+    line-height: 15px;
+    color: #c4c4cc;
+    padding: 12px 16px;
+}
+
+tbody td strong {
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+tbody td small {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+tbody td button {
+    all: unset; /*all => paratodos */
+    color: #9ff9cc;
+}
+
+tbody td button:hover{/**/
+    text-decoration: underLine;
+
+}
